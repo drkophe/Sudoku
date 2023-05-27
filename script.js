@@ -5,6 +5,8 @@ let reset = document.querySelector('#reset');
 let tryGame = document.querySelector('#try'); 
 let test = document.querySelector('#test');
 
+let result = document.querySelector('#result');
+
 let chooseDifficulty = document.querySelector('#difficulty');
 // console.log(chooseDifficulty);
 
@@ -268,10 +270,11 @@ tryGame.addEventListener('click', () => {
 
   for(let x=0; x<9; x++){
     for(let y=0; y<9; y++){
-      console.log(compare);
+        // compare = true;
         if(tabGame[x][y] !== tabSolution[x][y]){
           compare = false;
         }
+        console.log(compare);
     };
 };
 
@@ -279,7 +282,11 @@ console.log(compare);
 
   if(compare == true){
     console.log('Win !')
+    result.style.color = 'green';
+    result.textContent = 'Gagner !';
   } else {
     console.log('Loose !');
+    result.style.color = 'red';
+    result.textContent = 'Perdu ... Essaie encore !';
   }
 });
