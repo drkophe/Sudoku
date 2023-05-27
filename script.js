@@ -30,9 +30,9 @@ let difficulty = {
 
 console.log(difficulty[chooseDifficulty.value]);
 
-test.addEventListener('click', () => {
-    console.log(chooseDifficulty.value);
-});
+// test.addEventListener('click', () => {
+//     console.log(chooseDifficulty.value);
+// });
 
 /////////////////////// FUNCTIONS ///////////////////////
 
@@ -104,6 +104,7 @@ function cleanBoard(){
         let row = document.querySelectorAll(".row"+ x + " p");
         for(let y=0; y<9; y++){
             row[y].textContent = '';
+            row[y].style.color = "black";
         };
     };
 };
