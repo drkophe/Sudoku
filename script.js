@@ -247,19 +247,79 @@ for(let i = 0; i < selectNumbers.length; i++){
 for(let i = 0; i < selectCase.length; i++){
   selectCase[i].addEventListener('click', () => {
     for(let j = 0; j < selectNumbers.length; j++){ 
+
+
       if(selectCase[i].textContent == "" || selectCase[i].style.color == 'blue'){
+
         if(selectNumbers[j].style.fontWeight == 'bolder' &&
         selectNumbers[j].style.fontSize == '40px'){
+
           console.log(selectNumbers[j]);
           selectCase[i].textContent = Number(selectNumbers[j].textContent);
           selectCase[i].style.color = 'blue';
-        }
+        } 
       }
-      // console.log(selectNumbers[i]);
     };
     console.log(selectCase[i]);
   });
 };
+
+for(let i = 0; i < selectCase.length; i++){
+  selectCase[i].addEventListener('click', () => {
+    for(let j = 0; j < selectNumbers.length; j++){ 
+
+      // console.log(selectCase[i].style.backgroundColor)
+      if(selectCase[i].textContent == "" || selectCase[i].style.color !== 'blue'){
+
+        if(selectNumbers[j].style.fontWeight !== 'bolder' &&
+        selectNumbers[j].style.fontSize !== '40px'){
+          if(selectCase[i].style.backgroundColor == ''){
+            selectCase[i].style.backgroundColor = 'grey';
+          } else {
+            selectCase[i].style.backgroundColor = ''
+          }
+        } 
+      }
+    };
+    console.log(selectCase[i]);
+  });
+};
+
+
+/////// TOUCHE DU CLAVIER  //////
+
+// document.addEventListener('keydown', function(event) {
+//   // Vérifier si la touche appuyée est "6" du pavé numérique
+//   if (event.key === '6' && event.location === KeyboardEvent.DOM_KEY_LOCATION_NUMPAD) {
+//     // Votre code ici pour l'événement de la touche "6" du pavé numérique
+//     console.log(event.key);
+
+//   }
+// });
+
+// document.addEventListener('keydown', function(event) {
+
+//   let key = event.key;
+//   // let numbers = [1,2,3,4,5,6,7,8,9];
+
+//   for (let i=1; i<10; i++){
+//     if (event.key === i && event.location === KeyboardEvent.DOM_KEY_LOCATION_NUMPAD){
+//       console.log(key);
+//     }
+//   }
+// });
+
+document.addEventListener('keydown', function(event) {
+  var key = event.key;
+  var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+  if (numbers.includes(key) && event.location === KeyboardEvent.DOM_KEY_LOCATION_NUMPAD) {
+    console.log("La touche '" + key + "' du pavé numérique a été appuyée.");
+  }
+});
+
+
+/////////////
 
 tryGame.addEventListener('click', () => {
   makeBoardGame();
