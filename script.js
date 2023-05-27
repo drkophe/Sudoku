@@ -264,26 +264,28 @@ for(let i = 0; i < selectCase.length; i++){
   });
 };
 
-for(let i = 0; i < selectCase.length; i++){
-  selectCase[i].addEventListener('click', () => {
-    for(let j = 0; j < selectNumbers.length; j++){ 
 
-      // console.log(selectCase[i].style.backgroundColor)
-      if(selectCase[i].textContent == "" || selectCase[i].style.color !== 'blue'){
+// CASE GREY !
+// for(let i = 0; i < selectCase.length; i++){
+//   selectCase[i].addEventListener('click', () => {
+//     for(let j = 0; j < selectNumbers.length; j++){ 
 
-        if(selectNumbers[j].style.fontWeight !== 'bolder' &&
-        selectNumbers[j].style.fontSize !== '40px'){
-          if(selectCase[i].style.backgroundColor == ''){
-            selectCase[i].style.backgroundColor = 'grey';
-          } else {
-            selectCase[i].style.backgroundColor = ''
-          }
-        } 
-      }
-    };
-    console.log(selectCase[i]);
-  });
-};
+//       // console.log(selectCase[i].style.backgroundColor)
+//       if(selectCase[i].textContent == "" || selectCase[i].style.color !== 'blue'){
+
+//         if(selectNumbers[j].style.fontWeight !== 'bolder' &&
+//         selectNumbers[j].style.fontSize !== '40px'){
+//           if(selectCase[i].style.backgroundColor == ''){
+//             selectCase[i].style.backgroundColor = 'grey';
+//           } else {
+//             selectCase[i].style.backgroundColor = ''
+//           }
+//         } 
+//       }
+//     };
+//     console.log(selectCase[i]);
+//   });
+// };
 
 
 /////// TOUCHE DU CLAVIER  //////
@@ -309,6 +311,10 @@ for(let i = 0; i < selectCase.length; i++){
 //   }
 // });
 
+
+
+
+// GOOD !!! 
 document.addEventListener('keydown', function(event) {
   var key = event.key;
   var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
