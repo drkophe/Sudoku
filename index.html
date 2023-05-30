@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudoku</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,251 +20,250 @@
             <h2 id="result">Resultat</h2>
         </div>
 
-        <div id="darlandlight">
+        <div id="darkandlight">
             <div id="circle">
-                <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.16087 25.1837C16.1151 25.1837 21.7527 19.5461 21.7527 12.5918C21.7527 5.63756 16.1151 0 9.16087 0C6.42957 0 3.90138 0.869609 1.83807 2.34706C1.93595 2.34413 2.03418 2.34265 2.13277 2.34265C7.46977 2.34265 11.7963 6.66915 11.7963 12.0062C11.7963 17.3432 7.46977 21.6697 2.13277 21.6697C1.48756 21.6697 0.857124 21.6064 0.247314 21.4858C2.52676 23.7702 5.67875 25.1837 9.16087 25.1837Z" fill="#222222"/></svg>
+                <ion-icon name="moon-outline"></ion-icon>
             </div>
             <p>dark mode</p>
         </div>
 
     </header>
 
-    <section id="top">
+    <main>
+        <div id="choice">
+            <button id="new_game">Nouvelle Partie</button>
+            <button id="valid">Valider</button>
+            <button id="difficulty">Facile</button>
+            <!-- <button id="test">TEST</button> -->
+        </div>
 
-        <section class="left" id="block1">
+        <div id="table">
+            <section id="top">
 
-            <div class="row1">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
+                <section class="left" id="block1">
+        
+                    <div class="row1">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                    <div class="row2">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                    <div class="row3">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                </section>
+        
+                <section class="center" id="block2">
+        
+                    <div class="row1">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+        
+                    <div class="row2">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+        
+                    <div class="row3">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+                    
+                </section>
+        
+                <section class="right" id="block3">
+        
+                    <div class="row1">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+        
+                    <div class="row2">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+        
+                    <div class="row3">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+                    
+                </section>
+        
+            </section>
+        
+            <section id="mid">
+        
+                <section class="left" id="block4">
+        
+                    <div class="row4">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                    <div class="row5">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                    <div class="row6">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                </section>
+        
+                <section class="center" id="block5">
+        
+                    <div class="row4">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+        
+                    <div class="row5">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+        
+                    <div class="row6">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+                    
+                </section>
+        
+                <section class="right" id="block6">
+        
+                    <div class="row4">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+        
+                    <div class="row5">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+        
+                    <div class="row6">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+                    
+                </section>
+        
+            </section>
+        
+            <section id="bot">
+        
+                <section class="left" id="block7">
+        
+                    <div class="row7">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                    <div class="row8">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                    <div class="row9">
+                        <p class="col1"></p>
+                        <p class="col2"></p>
+                        <p class="col3"></p>
+                    </div>
+        
+                </section>
+        
+                <section class="center" id="block8">
+        
+                    <div class="row7">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+        
+                    <div class="row8">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+        
+                    <div class="row9">
+                        <p class="col4"></p>
+                        <p class="col5"></p>
+                        <p class="col6"></p>
+                    </div>
+                    
+                </section>
+        
+                <section class="right" id="block9">
+        
+                    <div class="row7">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+        
+                    <div class="row8">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+        
+                    <div class="row9">
+                        <p class="col7"></p>
+                        <p class="col8"></p>
+                        <p class="col9"></p>
+                    </div>
+                    
+                </section>
+        
+            </section>               
+        </div>
 
-            <div class="row2">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
+        <div id="selection">
+            <p id="1">1</p>
+            <p id="2">2</p>
+            <p id="3">3</p>
+            <p id="4">4</p>
+            <p id="5">5</p>
+            <p id="6">6</p>
+            <p id="7">7</p>
+            <p id="8">8</p>
+            <p id="9">9</p>
+        </div>
+    </main>
 
-            <div class="row3">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
-
-        </section>
-
-        <section class="center" id="block2">
-
-            <div class="row1">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-
-            <div class="row2">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-
-            <div class="row3">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-            
-        </section>
-
-        <section class="right" id="block3">
-
-            <div class="row1">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-
-            <div class="row2">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-
-            <div class="row3">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-            
-        </section>
-
-    </section>
-
-    <section id="mid">
-
-        <section class="left" id="block4">
-
-            <div class="row4">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
-
-            <div class="row5">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
-
-            <div class="row6">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
-
-        </section>
-
-        <section class="center" id="block5">
-
-            <div class="row4">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-
-            <div class="row5">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-
-            <div class="row6">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-            
-        </section>
-
-        <section class="right" id="block6">
-
-            <div class="row4">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-
-            <div class="row5">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-
-            <div class="row6">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-            
-        </section>
-
-    </section>
-
-    <section id="bot">
-
-        <section class="left" id="block7">
-
-            <div class="row7">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
-
-            <div class="row8">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
-
-            <div class="row9">
-                <p class="col1"></p>
-                <p class="col2"></p>
-                <p class="col3"></p>
-            </div>
-
-        </section>
-
-        <section class="center" id="block8">
-
-            <div class="row7">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-
-            <div class="row8">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-
-            <div class="row9">
-                <p class="col4"></p>
-                <p class="col5"></p>
-                <p class="col6"></p>
-            </div>
-            
-        </section>
-
-        <section class="right" id="block9">
-
-            <div class="row7">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-
-            <div class="row8">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-
-            <div class="row9">
-                <p class="col7"></p>
-                <p class="col8"></p>
-                <p class="col9"></p>
-            </div>
-            
-        </section>
-
-    </section>
-
-    <button id="play">NEW GAME</button>
-    <button id="reset">RESET</button>
-    <!-- <button id="test">TEST</button> -->
-    <button id="try">VALIDER</button>
-
-    <label for="difficulty">Difficulté :</label>
-    <select name="difficulty" id="difficulty">
-        <option value="easy">Facile</option>
-        <option value="medium">Normal</option>
-        <option value="hard">Difficile</option>
-        <option value="impossible">Impossible</option>
-    </select>
-
-
-    <div id="selection">
-        <p id="1">1</p>
-        <p id="2">2</p>
-        <p id="3">3</p>
-        <p id="4">4</p>
-        <p id="5">5</p>
-        <p id="6">6</p>
-        <p id="7">7</p>
-        <p id="8">8</p>
-        <p id="9">9</p>
-    </div>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>    
 </body>
 </html>
