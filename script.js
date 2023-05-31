@@ -314,7 +314,7 @@ for(let i = 0; i < selectCase.length; i++){
           console.log(selectNumbers[j]);
           selectCase[i].textContent = Number(selectNumbers[j].textContent);
           selectCase[i].style.color = 'black';
-          selectCase[i].style.fontSize = '35px';
+          // selectCase[i].style.fontSize = '35px';
         } 
       }
     };
