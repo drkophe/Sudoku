@@ -1,14 +1,15 @@
 /////////////////////// VARIABLES ///////////////////////
 
-let play = document.querySelector('#play');
+let play = document.querySelector('#new_game');
 let reset = document.querySelector('#reset');
-let tryGame = document.querySelector('#try'); 
+let tryGame = document.querySelector('#valid'); 
 let test = document.querySelector('#test');
+let changeMode = document.querySelector('#mode');
 
 let result = document.querySelector('#result');
 
 let chooseDifficulty = document.querySelector('#difficulty');
-// console.log(chooseDifficulty);
+console.log(chooseDifficulty.textContent);
 
 let selectNumbers = document.querySelectorAll('#selection p');
 console.log(selectNumbers);
@@ -24,13 +25,13 @@ let tabGame = [];
 let tabSolution = [];
 
 let difficulty = {
-    'easy': 20,
-    'medium': 40,
-    'hard': 60,
-    'impossible': 70
+    'Facile': 20,
+    'Normal': 40,
+    'Difficile': 60,
+    'Impossible': 70
 };
 
-console.log(difficulty[chooseDifficulty.value]);
+console.log(difficulty[chooseDifficulty.textContent]);
 
 // test.addEventListener('click', () => {
 //     console.log(chooseDifficulty.value);
@@ -65,6 +66,7 @@ function remplirBoard(){
             });
 
             col[x].textContent = randomNumber(numbers);
+            col[x].style.color = '#646464';
         };
     };
 };
@@ -107,6 +109,7 @@ function cleanBoard(){
         for(let y=0; y<9; y++){
             row[y].textContent = '';
             row[y].style.color = "black";
+            // row[y].style.fontSize = "medium";
         };
     };
 };
@@ -129,7 +132,7 @@ function setDifficulty(){
   // Définir un tableau qui servira de référence pour savoir si un index a déjà été utilisé ou pas (pour ne pas réutiliser)
   let tabIndexSelectionne = [];
 
-  for(let j=0; j < difficulty[chooseDifficulty.value]; j++ ){ // en fonction de la difficulté le nombre d'itération change (donc le nombre de case aussi)
+  for(let j=0; j < difficulty[chooseDifficulty.textContent]; j++ ){ // en fonction de la difficulté le nombre d'itération change (donc le nombre de case aussi)
 
     // Définir un index pris alétoirement parmis tout ceux de tabIndex[]
       let indexAleatoire = Math.floor(Math.random() * tabIndex.length);
@@ -207,12 +210,20 @@ while(error !== 0){
 }
 
 reset.addEventListener('click', () => {
-    cleanBoard();
-    error = 0;
+  for(let x=1; x<10; x++){
+    let row = document.querySelectorAll(".row"+ x + " p");
+    for(let y=0; y<9; y++){
+      if(row[y].style.color == 'black'){
+        row[y].textContent = '';
+      }
+    };
+};
 })
 
 play.addEventListener('click', () => {
     error = 1;
+    result.style.color = 'white';
+    result.textContent = 'Resultat';
     while(error !== 0){
         error = 0;
         cleanBoard();
@@ -221,28 +232,74 @@ play.addEventListener('click', () => {
     };
 });
 
+chooseDifficulty.addEventListener('click', () => {
+  if(chooseDifficulty.textContent == 'Facile'){
+    chooseDifficulty.textContent = 'Normal';
+  } else if(chooseDifficulty.textContent == 'Normal'){
+    chooseDifficulty.textContent = 'Difficile';
+  } else if(chooseDifficulty.textContent == 'Difficile'){
+    chooseDifficulty.textContent = 'Impossible';
+  } else if(chooseDifficulty.textContent == 'Impossible'){
+    chooseDifficulty.textContent = 'Facile';
+  };
+});
+
 for(let i = 0; i < selectNumbers.length; i++){
   selectNumbers[i].addEventListener('click', () => {
 
-    for(let j = 0; j < selectNumbers.length; j++){
-      if(selectNumbers[j].style.fontWeight == 'bolder'){
-        console.log('Un nombre est déjà selectionné');
-        selectNumbers[j].style.fontWeight = 'normal';
-        selectNumbers[j].style.fontSize = '30px';
-      } else {
-        if(selectNumbers[i].style.fontWeight == 'bolder' &&
-        selectNumbers[i].style.fontSize == '40px'){
-          selectNumbers[i].style.fontWeight = 'normal';
-          selectNumbers[i].style.fontSize = '30px';
-        } else {
-          selectNumbers[i].style.fontWeight = 'bolder';
-          selectNumbers[i].style.fontSize = '40px';
+
+
+    if(selectNumbers[i].style.fontWeight !== 'bolder' &&
+    selectNumbers[i].style.fontSize !== '40px'){
+      for(let j = 0; j < selectNumbers.length; j++){
+        if(selectNumbers[j].style.fontWeight == 'bolder'){
+          selectNumbers[j].style.fontWeight = 'normal';
+          selectNumbers[j].style.fontSize = '30px';
+          selectNumbers[j].style.boxShadow = "none";
         }
       }
-    }
+
+      selectNumbers[i].style.fontWeight = 'bolder';
+      selectNumbers[i].style.fontSize = '40px';
+      selectNumbers[i].style.boxShadow = colorModeChange + " 0px 0px 10px";
+    } else {
+      selectNumbers[i].style.fontWeight = 'normal';
+      selectNumbers[i].style.fontSize = '30px';
+      selectNumbers[i].style.boxShadow = "none";
+    }  
+
+ 
     // console.log(selectNumbers[i]);
   });
 };
+
+// for(let i = 0; i < selectNumbers.length; i++){
+//   selectNumbers[i].addEventListener('click', () => {
+
+
+
+//     for(let j = 0; j < selectNumbers.length; j++){
+//       if(selectNumbers[j].style.fontWeight == 'bolder'){
+//         console.log('Un nombre est déjà selectionné');
+//         selectNumbers[j].style.fontWeight = 'normal';
+//         selectNumbers[j].style.fontSize = '30px';
+
+//         // selectNumbers[i].style.fontWeight = 'bolder';
+//         // selectNumbers[i].style.fontSize = '40px';
+//       } else {
+//         if(selectNumbers[i].style.fontWeight == 'bolder' &&
+//         selectNumbers[i].style.fontSize == '40px'){
+//           selectNumbers[i].style.fontWeight = 'normal';
+//           selectNumbers[i].style.fontSize = '30px';
+//         } else {
+//           selectNumbers[i].style.fontWeight = 'bolder';
+//           selectNumbers[i].style.fontSize = '40px';
+//         }
+//       }
+//     }
+//     // console.log(selectNumbers[i]);
+//   });
+// };
 
 for(let i = 0; i < selectCase.length; i++){
   selectCase[i].addEventListener('click', () => {
@@ -256,7 +313,8 @@ for(let i = 0; i < selectCase.length; i++){
 
           console.log(selectNumbers[j]);
           selectCase[i].textContent = Number(selectNumbers[j].textContent);
-          selectCase[i].style.color = 'blue';
+          selectCase[i].style.color = 'black';
+          selectCase[i].style.fontSize = '35px';
         } 
       }
     };
@@ -348,11 +406,42 @@ console.log(compare);
 
   if(compare == true){
     console.log('Win !')
-    result.style.color = 'green';
-    result.textContent = 'Gagner !';
+    result.style.color = 'rgb(138, 247, 138)';
+    result.textContent = 'Victoire !';
   } else {
     console.log('Loose !');
-    result.style.color = 'red';
-    result.textContent = 'Perdu ... Essaie encore !';
+    result.style.color = 'rgb(255, 113, 113)';
+    result.textContent = 'Perdu ...';
   }
 });
+
+let colorModeChange = 'white';
+
+changeMode.addEventListener('click', () => {
+  if(changeMode.getAttribute('name') == 'moon-outline'){
+    changeMode.setAttribute('name','sunny-outline');
+    changeMode.style.color = '#222222';
+    changeMode.nextElementSibling.textContent = 'light mode';
+
+    document.querySelector('body').style.backgroundColor = 'white';
+
+    document.querySelector('h1').style.color = '#222222';
+    document.querySelector('h2').style.color = '#222222';
+
+    colorModeChange = '#222222';
+
+  } else if(changeMode.getAttribute('name') == 'sunny-outline') {
+    changeMode.setAttribute('name','moon-outline');
+    changeMode.style.color = 'white';
+    changeMode.nextElementSibling.textContent = 'dark mode';
+
+    document.querySelector('body').style.backgroundColor = '#222222';
+
+    document.querySelector('h1').style.color = 'white';
+    document.querySelector('h2').style.color = 'white';
+
+    colorModeChange = 'white';
+  }
+  console.log(changeMode);
+})
+console.log(changeMode.nextSibling);
