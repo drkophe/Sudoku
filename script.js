@@ -109,7 +109,7 @@ function cleanBoard(){
         for(let y=0; y<9; y++){
             row[y].textContent = '';
             row[y].style.color = "black";
-            // row[y].style.fontSize = "medium";
+            row[y].style.fontWeight = "normal";
         };
     };
 };
@@ -306,15 +306,14 @@ for(let i = 0; i < selectCase.length; i++){
     for(let j = 0; j < selectNumbers.length; j++){ 
 
 
-      if(selectCase[i].textContent == "" || selectCase[i].style.color == 'blue'){
+      if(selectCase[i].textContent == ""){
 
-        if(selectNumbers[j].style.fontWeight == 'bolder' &&
-        selectNumbers[j].style.fontSize == '40px'){
+        if(selectNumbers[j].style.fontWeight == 'bolder'){
 
           console.log(selectNumbers[j]);
           selectCase[i].textContent = Number(selectNumbers[j].textContent);
           selectCase[i].style.color = 'black';
-          // selectCase[i].style.fontSize = '35px';
+          selectCase[i].style.fontWeight = 'bolder';
         } 
       }
     };
