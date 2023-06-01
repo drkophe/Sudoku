@@ -161,7 +161,7 @@ button{
     display: none;
 } */
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     #choice{
         position: absolute;
         top: 85%;
@@ -207,9 +207,9 @@ button{
     ion-icon{
         font-size: 30px;
     }
-  }
+  } */
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
     #choice{
         position: absolute;
         top: 72%;
