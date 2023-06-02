@@ -157,241 +157,46 @@ button{
     margin-top: 5px;
 }
 
-/* body div:last-child{
-    display: none;
-} */
-
-/* @media screen and (max-width: 900px) {
-    #choice{
-        position: absolute;
-        top: 85%;
-    }
-
-    #choice button:last-child{
-        align-self: ;
-    }
-
-    header{
-        padding-left: 25%;
-    }
-
-    h1{
-        font-size: 40px;
-    }
-    h2{
-        font-size: 30px;
-    }
-
-    p{
-        width: 50px;
-        height: 50px;
-
-        font-size: 25px;
-
-        padding-top: 2px;
-    }
-
-    #darkandlight{
-        position: relative;
-        right: 10%;
-    }
-
-    #darkandlight p{
-        font-size: 15px;
-    }
-
-    #selection{
-        width: 60px;
-    }
-
-    ion-icon{
-        font-size: 30px;
-    }
-  } */
-
-  /* @media screen and (max-width: 900px) {
-    #choice{
-        position: absolute;
-        top: 72vh;
-        flex-direction: row;
-
-    }
-
-    #choice button{
-        font-size: 15px;
-        margin: 2px;
-    }
-
-    header{
-        padding-left: 25%;
-    }
-
-    h1{
-        font-size: 40px;
-    }
-    h2{
-        font-size: 30px;
-    }
-
-    p{
-        width: 8vw;
-        height: 8vh;
-
-        font-size: 25px;
-
-        padding-top: 0px;
-        line-height: 35px;
-    }
-
-    #selection{
-        position: absolute;
-        top: 47%;
-        rotate: -90deg;
-    }
-
-    #selection p{
-        rotate: 90deg;
-    }
-
-
-    #darkandlight{
-        padding-left: 20px;
-    }
-
-    #darkandlight p{
-        font-size: 10px;
-    }
-
-    #selection{
-        width: 60px;
-    }
-
-    ion-icon{
-        font-size: 20px;
-    }
-  } */
-
-
-  /* @media screen and (max-width: 900px) {
-    
-    #table{
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        padding: 0 0 0 0;
-        margin: 0 0 0 0;
-    }
-
-    #top, #mid, #bot {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    #block1, #block2, #block3, #block4, #block5, #block6, #block7, #block8, #block9 {
-        width: 30%;
-    }
-
-    p {
-        width: 33%;
-    }
-
-
-    #choice{
-        position: absolute;
-        top: 72vh;
-        flex-direction: row;
-
-    }
-
-    #choice button{
-        font-size: 15px;
-        margin: 2px;
-    }
-
-    header{
-        padding-left: 25%;
-    }
-
-    h1{
-        font-size: 40px;
-    }
-    h2{
-        font-size: 30px;
-    }
-
-    p{
-
-        font-size: 25px;
-
-        padding-top: 0px;
-        line-height: 35px;
-    }
-
-    #selection{
-        position: absolute;
-        top: 47%;
-        rotate: -90deg;
-
-        width: 60px;
-    }
-
-    #selection p{
-        rotate: 90deg;
-    }
-
-
-    #darkandlight{
-        padding-left: 20px;
-    }
-
-    #darkandlight p{
-        font-size: 10px;
-    }
-
-    ion-icon{
-        font-size: 20px;
-    }
-  } */
 
   @media screen and (max-width: 900px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        padding: 0 0 70px 0;
+        margin: 0;
+    }
+
+    ion-icon{
+        font-size: 20px;
+    }
+
+    #title{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+    }
     
-    #table{
-        width: 100%;
-        height: 50%;
+    #darkandlight{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-
-        padding: 0 0 0 0;
-        margin: 0 0 0 0;
     }
 
-    #top, #mid, #bot {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    #darkandlight p {
+        display: none ;
     }
 
-    #block1, #block2, #block3, #block4, #block5, #block6, #block7, #block8, #block9 {
-        width: 30%;
+    main{
+        flex-direction: column;
+        align-items: center;
     }
-
-    p {
-        width: 33%;
-    }
-
 
     #choice{
-        position: absolute;
-        top: 72vh;
         flex-direction: row;
-
+        padding: 10px 0 10px 0;
     }
 
     #choice button{
@@ -399,52 +204,101 @@ button{
         margin: 2px;
     }
 
-    header{
-        padding-left: 25%;
-    }
+    #table p {
+        width: 39px;
+        height: 39px;
 
-    h1{
-        font-size: 40px;
-    }
-    h2{
-        font-size: 30px;
-    }
-
-    p{
-        /* width: 8vw;
-        height: 8vh; */
-
-        font-size: 25px;
-
-        padding-top: 0px;
-        line-height: 35px;
+        vertical-align:middle;
+        line-height: 100%;
     }
 
     #selection{
-        position: absolute;
-        top: 47%;
-        rotate: -90deg;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
 
-        width: 60px;
+        margin: 10px 0 0 0;
     }
 
-    #selection p{
-        rotate: 90deg;
+    #selection p {
+        width: 39px;
+        height: 39px;
+
+        vertical-align:middle;
+        line-height: 100%;
     }
+  }
 
+  /* @media screen and (max-width: 400px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
 
-    #darkandlight{
-        padding-left: 20px;
-    }
-
-    #darkandlight p{
-        font-size: 10px;
+        padding: 0 0 70px 0;
+        margin: 0;
     }
 
     ion-icon{
         font-size: 20px;
     }
-  }
+
+    #title{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+    }
+    
+    #darkandlight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #darkandlight p {
+        display: none ;
+    }
+
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #choice{
+        flex-direction: row;
+        padding: 10px 0 10px 0;
+    }
+
+    #choice button{
+        font-size: 14px;
+        margin: 2px;
+    }
+
+    #table p {
+        width: 37px;
+        height: 37px;
+
+        vertical-align:middle;
+        line-height: 100%;
+    }
+
+    #selection{
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+
+        margin: 10px 0 0 0;
+    }
+
+    #selection p {
+        width: 37px;
+        height: 37px;
+
+        vertical-align:middle;
+        line-height: 100%;
+    }
+  } */
 
 
 
