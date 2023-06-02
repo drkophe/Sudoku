@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    border: 1px solid black;
+}
+
+/********************* HEADER **********************/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#title{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+#darkandlight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/********************** MAIN *************************/
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Option de jeux (choice) */
+#choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 15%;
+}
+
+/* Tableau de jeux (table, row, col, ...) */
+#table{
+
+    width: 70%;
+}
+
+#top, #mid, #bot{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+
+    width: 100%;
+}
+
+.left, .center, .right{
+    width: 33%;
+}
+
+#table div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 33%;
+}
+
+#table p{
+    width: 33%;
+    height: 33%;
+}
+
+/* Selection des nombres (selection) */
+#selection{
+
+    width: 15%;
+}
+
+
